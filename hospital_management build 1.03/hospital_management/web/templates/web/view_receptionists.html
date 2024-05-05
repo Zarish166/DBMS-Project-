@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Receptionists</title>
+    <link rel="stylesheet" href="{% static 'view_receptionists.css' %}">
+</head>
+<body>
+    <h1>Receptionists</h1>
+    <ul>
+        {% for receptionist in receptionists %}
+        <li>
+            Name: {{ receptionist.e.name }}<br>
+            Role: {{ receptionist.e.role }}<br>
+            Department: {{ receptionist.e.dept.name }}<br>
+            Salary: {{ receptionist.e.salary }}<br>
+            Sex: {{ receptionist.e.sex }}<br>
+            Mobile Number: {{ receptionist.e.mob_no }}<br>
+            Address: {{ receptionist.e.address }}, {{ receptionist.e.city }}, {{ receptionist.e.state }} - {{ receptionist.e.pin_code }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+</html>

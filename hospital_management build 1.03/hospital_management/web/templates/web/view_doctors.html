@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Doctors</title>
+    <link rel="stylesheet" href="{% static 'view_doctors.css' %}">
+</head>
+<body>
+    <h1>View Doctors</h1>
+    <div class="doctor-list">
+        {% for doctor in doctors %}
+        <div class="doctor">
+            <h2>{{ doctor.e.name }}</h2>
+            <p>Qualification: {{ doctor.qualification }}</p>
+            <p>Specialization: {{ doctor.specialization }}</p>
+            <p>Experience: {{ doctor.experience }} years</p>
+            <p>Department: {% if doctor.e.dept %}{{ doctor.e.dept.name }}{% else %}N/A{% endif %}</p>
+            <p>Salary: ${{ doctor.e.salary }}</p>
+        </div>
+        {% empty %}
+        <p>No doctors found.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

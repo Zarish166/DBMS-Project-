@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Test Reports</title>
+    <link rel="stylesheet" href="{% static 'view_test_results.css' %}">
+</head>
+<body>
+    <h1>Test Reports</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Report ID</th>
+                <th>Patient ID</th>
+                <th>Test Type</th>
+                <th>Result</th>
+                <th>Report Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for report in test_reports %}
+            <tr>
+                <td>{{ report.report_id }}</td>
+                <td>{{ report.p.p_id }}</td>
+                <td>{{ report.test_type }}</td>
+                <td>{{ report.result }}</td>
+                <td>{{ report.report_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

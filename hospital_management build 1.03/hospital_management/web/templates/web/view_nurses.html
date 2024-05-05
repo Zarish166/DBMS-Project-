@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Nurses</title>
+    <link rel="stylesheet" href="{% static 'view_nurses.css' %}">
+</head>
+<body>
+    <h1>View Nurses</h1>
+    <div class="nurse-list">
+        {% for nurse in nurses %}
+        <div class="nurse">
+            <h2>{{ nurse.e.name }}</h2>
+            <p>Department: {% if nurse.dept %}{{ nurse.dept.name }}{% else %}N/A{% endif %}</p>
+            <p>Shift: {{ nurse.shift }}</p>
+        </div>
+        {% empty %}
+        <p>No nurses found.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

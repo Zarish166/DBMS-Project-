@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="../../../../static/normalize.css">
+    <link rel="stylesheet" href="../../../../static/styling.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+    <header>
+        <h1>City Hospital</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contacts' %}" class="active">Contact</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Contact section -->
+        <section id="contact" class="contact py">
+            <div class="container grid">
+                <div class="contact-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2384.6268289831164!2d-6.214682984112116!3d53.29621947996855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486709e0c9c80f8f%3A0x92f408d10f2277c2!2sREVO!5e0!3m2!1sen!2snp!4v1636264848776!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="contact-right text-white text-center bg-blue">
+                    <div class="contact-head">
+                        <h3 class="lead">Contact Us</h3>
+                        <p class="text text-md">Thank you for your interest in City Hospital. We're here to assist you with any inquiries or concerns you may have. Please enter your contact information below:</p>
+                    </div>
+                    <form>
+                        <div class="form-element">
+                            <input type="text" class="form-control" placeholder="Your name">
+                        </div>
+                        <div class="form-element">
+                            <input type="email" class="form-control" placeholder="Your email">
+                        </div>
+                        <div class="form-element">
+                            <textarea rows="5" placeholder="Your Message" class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-white btn-submit">
+                            <i class="fas fa-arrow-right"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- End of contact section -->
+    </main>
+</main>
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="styling.css">
+<!-- footer  -->
+<footer id = "footer" class = "footer text-center">
+    <div class = "container">
+        <div class = "footer-inner text-white py grid">
+            <div class = "footer-item">
+                <h3 class = "footer-head">about us</h3>
+                <div class = "icon">
+                    <img src = "https://th.bing.com/th/id/OIP.NYNE-uXItBZLvyQFUGpqmwHaBa?w=319&h=66&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+                <address>
+                  
+                    city hospital <br>
+                    Main Peshawar Rd, Qasimabad <br>
+                    Rawalpindi, Islamabad Capital Territory 46000 <br>
+                    Pakistan
+                </address>
+            </div>
+
+            <div class = "footer-item">
+                <h3 class = "footer-head">tags</h3>
+                <ul class = "tags-list flex">
+                    <li>medical care</li>
+                    <li>emergency</li>
+                    <li>therapy</li>
+                    <li>surgery</li>
+                    <li>medication</li>
+                    <li>nurse</li>
+                </ul>
+            </div>
+
+            <div class = "footer-item">
+                <h3 class = "footer-head">Quick Links</h3>
+                <ul>
+                    <li><a href = "#" class = "text-white">Our Services</a></li>
+                    <li><a href = "#" class = "text-white">Our Plan</a></li>
+                    <li><a href = "#" class = "text-white">Privacy Policy</a></li>
+                    <li><a href = "#" class = "text-white">Appointment Schedule</a></li>
+                </ul>
+            </div>
+
+            <div class = "footer-item">
+                <h3 class = "footer-head">make an appointment</h3>
+                <p class = "text text-md">Book your appointment from the time slots mentioned below:</p>
+                <ul class = "appointment-info">
+                    <li>8:00 AM - 11:00 AM</li>
+                    <li>2:00 PM - 05:00 PM</li>
+                    <li>8:00 PM - 11:00 PM</li>
+                    <li>
+                        <i class = "fas fa-envelope"></i>
+                        <span>managercity@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class = "fas fa-phone"></i>
+                        <span>+92 300 9205643</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class = "footer-links">
+            <ul class = "flex">
+                <li><a href = "#" class = "text-white flex"> <i class = "fab fa-facebook-f"></i></a></li>
+                <li><a href = "#" class = "text-white flex"> <i class = "fab fa-twitter"></i></a></li>
+                <li><a href = "#" class = "text-white flex"> <i class = "fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- end of footer  -->
+</body>
+</html>

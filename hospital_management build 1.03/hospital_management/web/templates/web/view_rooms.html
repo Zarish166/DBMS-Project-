@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Rooms</title>
+    <link rel="stylesheet" href="{% static 'css/view_rooms.css' %}">
+</head>
+<body>
+    <h1>Room List</h1>
+    <div class="room-list">
+        {% for room in rooms %}
+        <div class="room">
+            <h2>Room ID: {{ room.r_id }}</h2>
+            <p>Type: {{ room.type }}</p>
+            <p>Capacity: {{ room.capacity }}</p>
+            <p>Availability: {{ room.availability|yesno:"Available,Not Available" }}</p>
+            <p>Department: {% if room.dept %}{{ room.dept.name }}{% else %}N/A{% endif %}</p>
+            <p>Nurse Station: {{ room.nurse_station|yesno:"Yes,No" }}</p>
+        </div>
+        {% empty %}
+        <p>No rooms available.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

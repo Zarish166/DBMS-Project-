@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients List</title>
+    <link rel="stylesheet" href="{% static 'view_patients.css' %}">
+</head>
+<body>
+    <h1>Patients List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Mobile No</th>
+                <th>Admit Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for patient in patients %}
+            <tr>
+                <td>{{ patient.p_id }}</td>
+                <td>{{ patient.name }}</td>
+                <td>{{ patient.dob }}</td>
+                <td>{{ patient.gender }}</td>
+                <td>{{ patient.mob_no }}</td>
+                <td>{{ patient.admit_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

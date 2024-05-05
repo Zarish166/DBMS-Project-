@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <label for="username">Name:</label>
+            <input type="text" name="username" id="username" required>
+        
+            <label for="pin_code">Pin Code:</label>
+            <input type="password" name="pin_code" id="pin_code" required>
+        
+            <button type="submit">Login</button>
+        </form>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
