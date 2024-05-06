@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revo</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="../../../../static/normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../../../../static/styling.css">
+</head>
+<body>
+    
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
+
+    <!-- header -->
+    <header class = "header bg-blue">
+        <nav class = "navbar bg-blue">
+            <div class = "container flex">
+                <a href = "home.html" class = "navbar-brand">
+                    <img src = "https://th.bing.com/th/id/OIP.NYNE-uXItBZLvyQFUGpqmwHaBa?w=326&h=66&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt = "site logo"style="width:400px;height:200px">
+                </a>
+                <button type = "button" class = "navbar-show-btn">
+                    <img src = "https://th.bing.com/th/id/OIP.1XIyn_Ys0FVGxwLSQK0eVgAAAA?w=143&h=150&c=7&r=0&o=5&dpr=1.5&pid=1.7     "style="width:30px;height:30px">
+                </button>
+
+                <div class = "navbar-collapse bg-white">
+                    <button type = "button" class = "navbar-hide-btn">
+                        <img src = "https://th.bing.com/th/id/OIP.1aoBOh50jMA3E6SVjj-6HQHaH_?w=181&h=195&c=7&r=0&o=5&dpr=1.5&pid=1.7" style="width:20px;height:20px">
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "#" class = "nav-link">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "{% url 'about' %}" class = "nav-link">About</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "{% url 'services' %}" class = "nav-link">Service</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "{% url 'doctors' %}" class = "nav-link">Doctors</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "#" class = "nav-link">Departments</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "{% url 'posts' %}" class = "nav-link">Blog</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "{% url 'contacts' %}" class = "nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <div class = "search-bar">
+                        <form>
+                            <div class = "search-bar-box flex">
+                                <span class = "search-icon flex">
+                                    <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAACUCAMAAAC+99ssAAAAZlBMVEX///8AAAD8/PwEBAT29vbq6urx8fHu7u75+fmtra3l5eUeHh5vb2/g4OBcXFxZWVlKSkrT09NhYWG4uLh7e3tERES/v7+GhobMzMyYmJg9PT0mJiZSUlKgoKCRkZFnZ2cUFBQzMzOcsbUnAAAEXklEQVR4nO2a2XKrMAyGwexbyg5hDe//kgdbZmnSFM+cRnChb6ZNm3jGf2RJlmU0jSAIgiAIgiAIgiA+ApO/2fc3LgOTv2aF7GrirqXmFTups/5+77068c/W8h0zuo+NvtLeqto6W9OC642t/kQQ95F0w9Pg/m97hdBjPAtsK4uPYKfpm+Oz/HqVtvzXeva5xru3XMyL3QxD/Bihf6I6P90rCqYijoumfezs15Zn6BLelBSroR5dldW+zZhpJeU9FRYFhZmwHq4FuTq/WSWkpeXuPrST6iFkzx8GmYaubp4uahaPC5On+Xko5wFYVVgPPXCdTi5q28PmuisBxF88mkF+oqGry6XvF4kU9CLACWV0dOgbRybjoftlU3Ur6ZaViet5Vict57+ddzamWcHiPpDzSiW3U2G5n+VxP2Qj+OaE6nf+QyzZI3tfagpxWlTA2npo0mYxPZguNw9HehA8NxvP8axGTDlFRwNnRaH4HniexyBg51BUsUcNO26OZTrGZEwcpzEet1ApFGg5z4EqPTxOYnwH8UTNoqMtbQK5LlMbHU1idP9ZTRsQsU2iNtodwdLu8dA/QWyx+s1RHA5e2mCpk8Y4SHYrIuXpk/1RTSusE/l/UDVGDTX8YXL8G8xYqOtVM1gEW7Kim/4vszqOchD6oK7+pKaNRZ2q7XxU27FOTHdRv9NSpQJlBXblFmsrg3yXKqQIcRIaIKOYSHUATFeoLBWXBzXUzUVSV4t91lDdZwuxzw5YBx+nFfKq45HiXBsIdSVWcWzCWulK07EcN2SZ3DkV8vGsPwHThXinMl6y8bhwDn2JaXDiNjAPZflivMMGCTedDqdyNCJ92TsP1Dlf6/fAUSaAEk+PjzKyPB8ZSMWdJAHP00M+7btOxVJ4YrYCYOq7bM7Nu+373iE/jvE2SohrulleLDuv+ZseBO9nPPgQPgbrTLHiN7I5V7wpKyPoP4ruLGK2k5QP2fYP+peF4+2dWPqccIBKtdz6I5hWwty8OhqW8ki+mFm3GE5eXORMw1tecUecBetFj5F7iWWbjLm2E2VDI3Ub2y0QDx80ecJM5bSaTzeaLqyGocpvRbCTtcmrUEODW8LqFtd6vseDN9q9+dCaZNpyveT20w+Xn5KgSsK9BZFDg6fhRcAmcnmNS1ez0u3GjLcjMX0POtpRvrt1X1ayHUvxqR3u3kTOe3KyKMun/fIGqVfDx0yzxr3vDciLCxJdJ+mrcPxKx7C6l74plfMt2FoupGBxT35Q4PktzU337oi/5/4K06Jv8gaGmpaPMMVt4/b0QH62oGfs9MTQ+B0eGv5tn7SHsyU9Y4/7VJ1fy/c0yHtbaFxpcTl+ug8NtMsVJfhjFrd9aFzmITMOD41o3IUG8iFSAWsXGpeLW9m4MERtesoDUgdE3VI4q96y4TGHhgOLe86zZQfwgmqIgyktr5WMN1y/Tq63rMR/c1WHIwiCIAiCIAiCIAiCIAiCIAiCIAiCILR/T4gnIxeCgP4AAAAASUVORK5CYII="style="width:30px;height:30px">
+                                </span>
+                                <input type = "search" class = "search-control" placeholder="Search here">
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </nav>
+
+        <div class = "header-inner text-white text-center">
+            <div class = "container grid">
+                <div class = "header-inner-left">
+                    <h1>your most trusted<br> <span>health partner</span></h1>
+                    <p class = "lead">the best match services for you</p>
+                    <p class = "text text-md">we care for your health</p>
+                    <div class = "btn-group">
+                        <a href = "#" class = "btn btn-white">Learn More</a>
+                        <a href = "{% url 'login' %}" class = "btn btn-light-blue">Sign In</a>
+                    </div>
+                </div>
+                <div class = "header-inner-right">
+                    <img src = "https://th.bing.com/th/id/OIP.iZ3JOvVWa9-O5eY--P_7mAHaE8?w=254&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--footer-->
+    <footer id = "footer" class = "footer text-center">
+        <div class = "container">
+            <div class = "footer-inner text-white py grid">
+                <div class = "footer-item">
+                    <h3 class = "footer-head">about us</h3>
+                    <div class = "icon">
+                        <img src = "https://th.bing.com/th/id/OIP.NYNE-uXItBZLvyQFUGpqmwHaBa?w=319&h=66&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                    </div>
+                    <address>
+                      
+                        city hospital <br>
+                        Main Peshawar Rd, Qasimabad <br>
+                        Rawalpindi, Islamabad Capital Territory 46000 <br>
+                        Pakistan
+                    </address>
+                </div>
+    
+                <div class = "footer-item">
+                    <h3 class = "footer-head">tags</h3>
+                    <ul class = "tags-list flex">
+                        <li>medical care</li>
+                        <li>emergency</li>
+                        <li>therapy</li>
+                        <li>surgery</li>
+                        <li>medication</li>
+                        <li>nurse</li>
+                    </ul>
+                </div>
+    
+                <div class = "footer-item">
+                    <h3 class = "footer-head">Quick Links</h3>
+                    <ul>
+                        <li><a href = "#" class = "text-white">Our Services</a></li>
+                        <li><a href = "#" class = "text-white">Our Plan</a></li>
+                        <li><a href = "#" class = "text-white">Privacy Policy</a></li>
+                        <li><a href = "#" class = "text-white">Appointment Schedule</a></li>
+                    </ul>
+                </div>
+    
+                <div class = "footer-item">
+                    <h3 class = "footer-head">make an appointment</h3>
+                    <p class = "text text-md">Book your appointment from the time slots mentioned below:</p>
+                    <ul class = "appointment-info">
+                        <li>8:00 AM - 11:00 AM</li>
+                        <li>2:00 PM - 05:00 PM</li>
+                        <li>8:00 PM - 11:00 PM</li>
+                        <li>
+                            <i class = "fas fa-envelope"></i>
+                            <span>managercity@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class = "fas fa-phone"></i>
+                            <span>+92 300 9205643</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class = "footer-links">
+                <ul class = "flex">
+                    <li><a href = "#" class = "text-white flex"> <i class = "fab fa-facebook-f"></i></a></li>
+                    <li><a href = "#" class = "text-white flex"> <i class = "fab fa-twitter"></i></a></li>
+                    <li><a href = "#" class = "text-white flex"> <i class = "fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- end of header -->

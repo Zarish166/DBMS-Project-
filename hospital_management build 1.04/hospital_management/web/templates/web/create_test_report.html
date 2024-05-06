@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Test Report</title>
+    <link rel="stylesheet" href="{% static 'create_test_report.css' %}">
+</head>
+<body>
+    <h1>Create Test Report</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="patient_id">Patient ID:</label>
+        <input type="number" id="patient_id" name="patient_id" required><br><br>
+
+        <label for="test_type">Test Type:</label>
+        <input type="text" id="test_type" name="test_type" required><br><br>
+
+        <label for="result">Result:</label>
+        <textarea id="result" name="result" required></textarea><br><br>
+
+        <label for="report_date">Report Date:</label>
+        <input type="date" id="report_date" name="report_date" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+from django.urls import path
+from . import views
+from django.contrib.auth import views as auth_views
+
+urlpatterns = [
+    path('', views.home, name='home'),
+    path('about/', views.about, name='about'),
+    path('services/', views.services, name='services'),
+    path('doctors/', views.doctors, name='doctors'),
+    path('posts/', views.posts, name='posts'),
+    path('contacts/', views.contacts, name='contacts'),
+    path('login/', views.login_view, name='login'),  # Updated this line
+    path('view-patients/', views.view_patients, name='view_patients'),
+    path('add-patient/', views.add_patient, name='add_patient'),
+    path('view-employees/', views.view_employees, name='view_employees'),
+    path('add-employee/', views.add_employee, name='add_employee'),
+    path('view-doctors/', views.view_doctors, name='view_doctors'),
+    path('view-receptionists/', views.view_receptionists, name='view_receptionists'),
+    path('view-nurses/', views.view_nurses, name='view_nurses'),
+    path('view-rooms/', views.view_rooms, name='view_rooms'),
+    path('create-test-report/', views.create_test_report, name='create_test_report'),
+    path('view-test-reports/', views.view_test_reports, name='view_test_report'),
+    path('create-medical-record/', views.create_medical_record, name='create_medical_record'),
+    path('view-medical-records/', views.view_medical_records, name='view_medical_records'),
+    path('create-appointment/', views.create_appointment, name='create_appointment'),
+    path('view-appointments/', views.view_appointments, name='view_appointments'),
+    path('front/', views.front_view, name='front'),
+    path('patients/', views.list_patients, name='list_patients'),
+    path('add_patient/', views.add_patient, name='add_patient'),
+    path('add_employee/', views.add_employee, name='add_employee'),
+    path('view_employees/', views.view_employees, name='view_employees'),
+    path('view_doctors/', views.view_doctors, name='view_doctors'),
+    path('receptionists/', views.view_receptionists, name='view_receptionists'),
+    path('view_nurses/', views.view_nurses, name='view_nurses'),
+    path('view_rooms/', views.view_rooms, name='view_rooms'),
+    path('create_test_report/', views.create_test_report, name='create_test_report'),
+    path('view_test_results/', views.view_test_results, name='view_test_results'),
+    path('create_medical_record/', views.create_medical_record, name='create_medical_record'),
+    path('view_medical_records/', views.view_medical_records, name='view_medical_records'),
+    path('create_appointment/', views.create_appointment, name='create_appointment'),
+    path('view_appointments/', views.view_appointments, name='view_appointments'),
+]

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptionist Dashboard</title>
+    <link rel="stylesheet" href="{% static 'front.css' %}">
+</head>
+<body>
+    <h1>Receptionist Dashboard</h1>
+    <div class="button-container">
+        <button onclick="location.href='{% url 'list_patients' %}'">View Patients</button>
+        <button onclick="location.href='{% url 'add_patient' %}'">Add Patient</button>
+        <button onclick="location.href='{% url 'view_employees' %}'">View Employees</button>
+        <button onclick="location.href='{% url 'add_employee' %}'">Add Employee</button>
+        <button onclick="location.href='{% url 'view_doctors' %}'">View Doctors</button>
+        <button onclick="location.href='{% url 'view_receptionists' %}'">View Receptionists</button>
+        <button onclick="location.href='{% url 'view_nurses' %}'">View Nurses</button>
+        <button onclick="location.href='{% url 'view_rooms' %}'">View Rooms</button>
+        <button onclick="location.href='{% url 'create_test_report' %}'">Create Test Report</button>
+        <button onclick="location.href='{% url 'view_test_results' %}'">View Test Reports</button>
+        <button onclick="location.href='{% url 'create_medical_record' %}'">Create Medical Record</button>
+        <button onclick="location.href='{% url 'view_medical_records' %}'">View Medical Records</button>
+        <button onclick="location.href='{% url 'create_appointment' %}'">Create Appointment</button>
+        <button onclick="location.href='{% url 'view_appointments' %}'">View Appointments</button>
+    </div>
+</body>
+</html>

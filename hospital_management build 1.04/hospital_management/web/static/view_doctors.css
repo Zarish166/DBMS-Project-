@@ -1,0 +1,36 @@
+/* Styles for the view_doctors page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.doctor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.doctor {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+}
+
+.doctor h2 {
+    color: #4CAF50;
+}
+
+.doctor p {
+    font-size: 16px;
+    color: #666;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Appointment</title>
+    <link rel="stylesheet" href="{% static 'create_appointment.css' %}">
+</head>
+<body>
+    <h1>Create Appointment</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="doctor">Doctor:</label>
+        <select id="doctor" name="doctor">
+            {% for doctor in doctors %}
+            <option value="{{ doctor.id }}">{{ doctor.name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="patient">Patient:</label>
+        <select id="patient" name="patient">
+            {% for patient in patients %}
+            <option value="{{ patient.id }}">{{ patient.name }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="app_date">Appointment Date:</label>
+        <input type="date" id="app_date" name="app_date" required><br><br>
+
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status" required><br><br>
+
+        <input type="submit" value="Create Appointment">
+    </form>
+</body>
+</html>

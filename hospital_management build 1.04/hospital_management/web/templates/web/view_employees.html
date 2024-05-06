@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Employees</title>
+    <link rel="stylesheet" href="{% static 'view_employees.css' %}">
+</head>
+<body>
+    <h1>View Employees</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Sex</th>
+                <th>Mobile Number</th>
+                <th>Address</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Pin Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.role }}</td>
+                <td>{{ employee.department }}</td>
+                <td>{{ employee.salary }}</td>
+                <td>{{ employee.sex }}</td>
+                <td>{{ employee.mobile_number }}</td>
+                <td>{{ employee.address }}</td>
+                <td>{{ employee.state }}</td>
+                <td>{{ employee.city }}</td>
+                <td>{{ employee.pin_code }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
